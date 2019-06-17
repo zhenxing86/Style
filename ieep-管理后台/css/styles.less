@@ -1,0 +1,288 @@
+html,body{height: 100%;width: 100%; }	
+html,body{-webkit-text-size-adjust: 100%;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, a,p,span, blockquote, th, td, hr, button,menu, nav, section { margin: 0;padding: 0;font-family:'Microsoft YaHei'; font-size: 16px;}
+body {width: 100%;height: 100%; color: #333;}
+ul,ol,dl{ list-style-type:none; font-family:"Microsoft YaHei";}
+i,em { font-style: normal;}
+select,input,textarea{ font-family:"Microsoft YaHei"; font-size: 16px; }
+textarea {resize:none;}
+a{text-decoration:none;outline:none; color:#333}
+a:link,a:visited,a:active{text-decoration:none;outline:none;}
+table{ border-collapse:collapse;}
+
+
+.clear { clear: both;}
+.icon-logo,.icon-search,.icon-up,.icon-down,.icon-tag,.icon-downarrow,.icon-uparrow,.icon-sigh { background:url(../images/icon.png?v=2) no-repeat;}
+.icon-search { display:block; width:17px; height:20px; margin:0 auto; background-position:0 -30px; }
+.icon-up { margin: 0 auto; width: 19px; height: 20px; display: block; background-position: -37px -30px;}
+.icon-down { margin: 0 auto; width: 19px; height: 20px; display: block; background-position: -56px -30px;}
+.icon-tag { position: absolute; right:-10px; top:-10px; z-index: 99; width: 20px; height: 20px; text-align: center; line-height: 20px; color: #fff; display: block; background-position: -17px -30px;}
+.icon-downarrow { position: absolute; right:10px; top: 15px; width: 16px; height: 20px; display: block; background-position: -102px -30px;}
+.icon-uparrow { position: absolute; right:10px; top: 15px; width: 16px; height: 20px; display: block; background-position: -134px -30px;}
+.icon-sigh { width: 42px; height: 37px;display: inline-block; vertical-align: middle; margin-right: 20px; background-position: 0px -50px;}
+.hidden {  visibility: hidden;}
+
+.leftsidebar_box dd a{ height:50px; line-height: 50px; display: block}
+.leftsidebar_box dd a:hover { background:#97A5BA;}
+
+.header {  height:90px; background:#fff; border-bottom:1px solid #ddd;
+    .logo {
+        .icon-logo { float:left; margin:30px 0 0 20px; display:block; width:254px; height:30px; }
+    }
+    .h-right { float:right; margin:35px 40px 0 0;
+        .user { float:left; position:relative; margin-right:50px;
+            img { position:absolute; left:-50px; top:-10px; width:42px; height:42px; border-radius:42px;} 
+        }
+        .exit {float:left; color:#999;}
+        .exit:hover { color:#333;}
+    } 
+}
+
+//main
+.main {min-width: 1100px; 
+    .main-left { position:absolute; left:0; top:90px; width:210px; min-height:990px; background:#2e4a75;padding-top:1px;
+        //search
+        .search {  margin:45px auto 22px; width:186px; height:36px; border:1px solid #97a5ba; border-radius:2px; 
+            input { float:left; padding:0 10px; width:130px; height:36px; font-size:14px; border:0; background:none; color: #fff;}
+            .btn { float:right; width:34px; height:36px; padding-top:8px; display:block; box-sizing:border-box;
+                &:hover { background: #203c67;}
+            }           
+        }
+        //nav
+        .nav {
+            dt { min-height: 50px; line-height: 50px; border-top:1px solid #97a5ba; position: relative;
+                a { position: relative; display: block; color:#d8e7ff; height: 50px;padding-left: 50px;-webkit-transition: background 0.3s, box-shadow 0.3s;transition: background 0.3s, box-shadow 0.3s;
+                    .block { display: none; position: absolute; left: 0; top: 0; width: 6px; height: 50px; background: #ae2c2e;}
+                    &:hover { color:#333; background: #fff; }
+                    &:hover .block { display: block;}
+                    &:hover .icon-downarrow { background-position: -118px -30px;}
+                    &:hover .icon-uparrow { background-position: -150px -30px;}
+                   
+                }
+                .on {color:#333; background: #fff;  font-weight: bold;
+                    .block { display: block;}  
+                }
+                .name { position: relative; padding-right: 10px;}
+                .tag {right:-30px; top:2px;}
+                
+            }
+        .menu_chioce {background: #6d819f;  text-align: center; font-size: 14px;border-top:1px solid #415f8e;
+            a { display:block; color: #fff; height: 50px; display: block;}
+             }
+          
+        }
+        //nav-end  
+    }
+    .main-box { margin: 0 30px;}
+    .main-right { box-sizing:border-box; padding-left: 210px; width: 100%;
+        //menu
+        .menu { padding-left:30px; height: 78px; background: #f7f7f7; border-bottom: 1px solid #ae2c2e;
+            li { float: left; margin-right: 10px; height: 78px; }
+             a { position: relative; display: block; color:#d8e7ff; padding: 0 20px; height: 78px; line-height:78px;-webkit-transition: background 0.3s, box-shadow 0.3s;transition: background 0.3s, box-shadow 0.3s; color: #666; font-weight: bold;
+                    .block { display: none; position: absolute; left: 0; bottom: 0; width:100%; height: 4px; background: #ae2c2e;}
+                    &:hover { color:#333; }
+                    &:hover .block { display: block;}
+            }
+             .on {color:#333; 
+                    .block { display: block;}  
+                }
+        
+        }
+        //submenu
+        .submenu {margin: 30px 0 40px 0px;
+            a { position: relative; margin: 0 20px;color: #666;
+              &:after {content: ""; position: absolute; right:-25px; top: 0; width: 9px; height: 20px; display: block; background: url(../images/icon.png) no-repeat -93px -30px;}
+              &:nth-last-child(1):after { background:none; }  
+              &:nth-child(1):before { content: "";position: absolute; left:-10px; top: 10px;  width: 4px; height: 4px; display: block; background: #b2b2b2;}
+              &:hover { color: #333;}
+            }
+            .on { color: #333;}
+           
+        }
+        //tool
+        .tool { 
+            .btn { display: inline-block; margin-right:7px; min-width: 130px; height: 38px; text-align: center; line-height: 38px; color: #2e4a75; border: 1px solid #2e4a75; border-radius: 5px;white-space: nowrap;  
+            &:hover { background: #2e4a75; color: #fff;}
+            } 
+        }
+        //content
+        .content { margin: 25px 0px 0;
+            
+          
+        }   
+       
+    }
+}
+
+
+//list
+.list-box { }
+.list { border: 1px solid #ccc; table-layout: fixed;
+    
+    th { font-weight:normal; height: 50px; background: #eaf2ff;font-size: 14px; border: 1px solid #ccc;}
+    td { padding: 0 5px;height: 50px; white-space: nowrap;border: 1px solid #ccc;}
+    td:nth-child(1) { text-align: center;}
+    .check-width { width: 40px;}
+    .btn-width { width: 100px;}
+    .sort { min-width: 90px; text-align: center; }
+    .btn-sort { width: 32px; height: 26px; padding-top: 6px; display: inline-block; margin: 5px;  background: #e4e9f0; border-radius: 5px;
+        &:hover { background: #caddf7; color: #fff;}
+    }
+    .btn-share { position:relative;display: inline-block; padding: 0 10px; min-width: 40px; height: 30px; line-height: 30px;  color: #2e4a75; text-align: center; border: 1px solid #2e4a75; border-radius: 5px;font-size: 14px; 
+        &:hover { background: #2e4a75; color: #fff;}
+     }
+    .txt {  height:50px; line-height: 50px; font-size: 14px; position: relative;
+        .tips { display: none;}
+        .text { min-height:50px; line-height: 50px; font-size: 14px; display:block;text-overflow: ellipsis; overflow: hidden; }
+        &:hover .tips {position: absolute; top:40px; right: -220px; z-index: 3; width:200px; overflow: inherit; white-space: normal; border: 1px solid #ccc; background: #fff; padding:5px 10px; border-radius: 5px; line-height: 26px; display: block; font-size: 14px;}
+        &:hover .text { color:#203C67; }
+    }
+    
+}
+//page
+.page { float: right; margin-top: 20px; 
+    span { display: inline-block; margin-right: 10px;font-size: 14px;}
+    a { display: inline-block; width: 30px; height: 32px; text-align: center; line-height: 32px; border: 1px solid #999;}
+    a:hover { border: 1px solid #ae2c2e; color: #ae2c2e; background: #fbf4f4;}
+}
+
+
+
+            
+// visibility: hidden;
+//reveal-modal 这里开始是弹出层的内容
+.modal {visibility: hidden; position: absolute; left:0; top:0 ; z-index: 101;  width: 100%; height: 100%;
+    .modal-div {  position: absolute; left: 50%; top: 50%;transform: translate(-50%, -50%);}
+    .box {margin: 0 auto;  background: #fff; border-radius: 5px; position: relative;}
+    .title { background: #2e4a75; height: 40px; line-height: 40px; color: #fff; text-align: center; border-top-left-radius: 3px;border-top-right-radius: 3px;}
+    .close-modal { position:absolute; right:12px; top:12px; line-height:16px; display: block; font-size:30px; color: #fff; cursor: pointer; 
+            &:hover { color: #333;}
+    } 
+    .close-modal-big { position:absolute; right:12px; top:12px; line-height:16px; display: block; font-size:30px; cursor: pointer; 
+            &:hover { color: #333;}
+    } 
+    .btn { box-sizing: border-box; padding-top:18px; height: 78px; text-align: center; border-top: 1px solid #ccc; margin-top: 20px; 
+            a { position:relative;display: inline-block; padding: 0 30px; min-width: 40px; height: 36px; line-height: 36px;  color: #2e4a75; border: 1px solid #2e4a75;  border-radius: 5px; 
+                &:hover { background: #395d95; color: #fff; border: 1px solid #395d95;}
+                &:nth-child(2){ margin-left: 30px;}
+            }
+            .on { background: #2e4a75; color: #fff;}
+            .on:hover { background: #395d95; color: #fff;}
+            
+        }
+    //whether-modal
+    .whether-modal {width: 362px; 
+        .close-modal { color: #999;
+             &:hover { color: #2e4a75;}
+        }
+        .close-modal-big { color: #999;
+             &:hover { color: #2e4a75;}
+        }
+        
+        .con { min-height: 70px; text-align: center; font-size: 18px; padding-top: 50px; } 
+    }
+    //course-modal
+    .course-modal { width: 722px;
+
+        .con { min-height:170px; }
+        .msg { clear: both; text-align: center; color: #ae2c2e; line-height: 40px; }
+        .div-list { padding: 20px 0 0; min-height:100px; 
+            li { min-height: 40px; line-height: 40px; margin: 12px 0;}
+            .left { float: left; width: 150px; text-align: right; padding-right: 5px;}
+            .right { float: left;}
+            input { padding-left: 5px; width: 470px; height: 40px;  line-height: 40px;border: 1px solid #ccc; border-radius:2px;}
+            select { padding-left: 5px; width: 478px; height: 40px; border: 1px solid #ccc; border-radius:2px;}
+            textarea { padding-left: 5px; width: 470px; height: 60px; border: 1px solid #ccc; border-radius:2px;}
+            
+        }
+        .btn-share {position:relative;display: inline-block; padding: 0 30px; min-width: 40px; height: 36px; line-height: 36px;  color: #2e4a75; border: 1px solid #2e4a75;  border-radius: 5px; 
+            &:hover { background: #395d95; color: #fff; border: 1px solid #395d95;}
+        }
+        .ellipsis {height: 40px; line-height: 60px; width:380px;  display:inline-block;text-overflow: ellipsis; overflow: hidden;white-space: nowrap; }
+        .music { background: none;
+             .close-modal { color: #999;
+             &:hover { color: #2e4a75;}
+            }
+        }
+       
+    }
+    .search { margin-bottom: 20px;
+     input { margin: 0 10px; padding-left: 5px;  height: 36px;  line-height: 36px;border: 1px solid #ccc; border-radius:2px;}
+    }
+    
+    //table-con
+    .table-con { padding:20px; height: 480px;
+        .btn-share { padding: 0 10px; height: 30px; line-height: 30px;}
+        .small-title { color: #2e4a75; line-height: 30px; font-weight: bold;}
+        .list-box {height: 280px; clear: both; }
+         input { margin: 0 10px; padding-left: 5px;  height: 36px; line-height: 36px; border: 1px solid #ccc; border-radius:2px;}
+         .height-330 { height: 330px;}
+        .add-box { box-sizing: border-box; padding: 10px; border: 1px solid #ccc; border-radius: 5px; 
+            li { display: inline-block;}
+            .input-w1 { width: 80px;}
+            .input-w2 { width: 170px;}
+            .input-w3 { width: 90px;}
+            .btn { border-top: 0; float: right; margin-top: 10px; height:60px;}
+            
+        } 
+
+        .list { margin-bottom: 10px;
+            th { padding: 0 5px;height:40px;}
+            td { padding: 0 5px;height:40px; white-space: nowrap; text-align: center;}
+            .btn-width { width: 80px;}
+            .txt {  height:40px; line-height: 40px; font-size: 14px; position: relative;
+                .text { min-height:40px; line-height: 40px;}
+            }
+        }
+
+        .check {height: 500px; overflow-y: auto;
+        .list-table { height: 500px;
+            td { border: 1px solid #ccc;}
+        }
+      
+    }
+ 
+    }
+ 
+    .list-table {border: 0; table-layout: fixed;
+         td { padding:5px; border: 0; }
+         input { margin: 0; width:505px; height: 36px; line-height: 36px; border: 1px solid #ccc; border-radius:2px;}
+         textarea { width:510px;  height:110px; border: 1px solid #ccc; border-radius:2px;}
+    }
+    //subject 问卷题目
+    .subject { border: 0;
+        td { padding:12px 5px;border: 0;}
+        input { box-sizing: border-box; padding: 0 5px; margin: 0; width:505px; height: 36px; line-height: 36px; border: 1px solid #ccc; border-radius:2px;}
+        .c-t { display: inline-block; width: 20px;}  
+        
+    }
+  
+    
+}    
+.modal-bg { position: fixed; height: 100%;width: 100%;  background: #000;background: rgba(0,0,0,.8);z-index: 100;display: none;top: 0;left: 0;}
+
+
+//checkbox 复选框样式
+.checkbox { 
+    display: inline-block; vertical-align: middle; color: #AE2C2E; border: 0;padding:0;
+    label { display: inline-block; position: relative; width: 16px; height: 16px; cursor: pointer; margin-right: 10px;}
+    label::before { content: '';border: 1px solid #ccc;}
+    input[type="checkbox"] {opacity: 0;  -webkit-appearance: none; display: inline-block; vertical-align: middle; z-index: 100;border: 0; width: auto;}
+    input[type="checkbox"]:checked + label::after {content: '\2713';text-align: center;line-height: 16px; font-size: 14px; color: #fff; background: #ae2c2e;border: 1px solid #ae2c2e;}
+    input[type="checkbox"],label::before,input[type="checkbox"]:checked + label::after {
+       width: 16px; height: 16px; top:0; left:0; position: absolute;  cursor: pointer; 
+    }
+}
+
+.table-checkbox { border: 1px; display: block; margin: 0 auto;
+    label { display: block; position: relative; width: 16px; height: 16px; cursor: pointer; margin: 0 auto;}
+    label::before { content: '';border: 1px solid #999;}
+}
+
+
+.black_overlay { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1001; background: rgba(0,0,0,.5);}
+.dialog {position:fixed;visibility: visible; display:none; z-index: 9999;}
+
+
+
+

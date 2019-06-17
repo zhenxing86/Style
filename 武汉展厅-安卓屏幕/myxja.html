@@ -1,0 +1,1086 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="data-spm" content="a215s">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<!--less-star-->
+<!--<link href="less/styles.less" type="text/css" rel="stylesheet/less">
+<script src="js/lib/less.min.js" type="text/javascript"></script>-->
+<!--less-end-->
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+<link href="css/iconfont.css" type="text/css" rel="stylesheet">
+<!--<script src="js/lib/flexible.js?v=1" type="text/javascript"></script>-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+function banner(){	
+	var bn_id = 0;
+	var bn_id2= 1;
+	var speed33=300000;
+	var qhjg = 1;
+    var MyMar33;
+	$("#banner .d1").hide();
+	$("#banner .d1").eq(0).fadeIn("slow");
+	if($("#banner .d1").length>1)
+	{
+		$("#banner_id li").eq(0).addClass("nuw");
+		function Marquee33(){
+			bn_id2 = bn_id+1;
+			if(bn_id2>$("#banner .d1").length-1)
+			{
+				bn_id2 = 0;
+			}
+			$("#banner .d1").eq(bn_id).css("z-index","2");
+			$("#banner .d1").eq(bn_id2).css("z-index","1");
+			$("#banner .d1").eq(bn_id2).show();
+			$("#banner .d1").eq(bn_id).fadeOut("slow");
+			$("#banner_id li").removeClass("nuw");
+			$("#banner_id li").eq(bn_id2).addClass("nuw");
+			bn_id=bn_id2;
+		};
+	
+		MyMar33=setInterval(Marquee33,speed33);
+		
+		$("#banner_id li").click(function(){
+			var bn_id3 = $("#banner_id li").index(this);
+			if(bn_id3!=bn_id&&qhjg==1)
+			{
+				qhjg = 0;
+				$("#banner .d1").eq(bn_id).css("z-index","2");
+				$("#banner .d1").eq(bn_id3).css("z-index","1");
+				$("#banner .d1").eq(bn_id3).show();
+				$("#banner .d1").eq(bn_id).fadeOut("slow",function(){qhjg = 1;});
+				$("#banner_id li").removeClass("nuw");
+				$("#banner_id li").eq(bn_id3).addClass("nuw");
+				bn_id=bn_id3;
+			}
+		})
+		$("#banner_id").hover(
+			function(){
+				clearInterval(MyMar33);
+			}
+			,
+			function(){
+				MyMar33=setInterval(Marquee33,speed33);
+			}
+		)	
+	}
+	else
+	{
+		$("#banner_id").hide();
+	}
+}
+</script>
+
+<!--<script>setInterval("jnkc.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",0);</script>
+<script>setInterval("jnkc1.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",0);</script>-->
+<style type="text/css">
+
+/* banner */
+.banner{height:768px;overflow:hidden;}
+.banner .d1{width:100%;height:768px;display:block;position:absolute;left:0px;top:0px;}
+.banner .d2{width:100%;height:30px;clear:both;position:absolute;z-index:100;left:0px;top:360px;}
+.banner .d2 ul{float:left;position:absolute;left:10px;top:0;display:inline;}
+.banner .d2 li{width:15px;height:15px;overflow:hidden;cursor:pointer; background: #fff; border-radius: 30px; margin-bottom: 10px;}
+.banner .d2 li.nuw{ background: #cbaf51;}
+</style>
+
+</head>
+<body>
+	
+	
+<div class="banner" id="banner" >
+
+
+<div class="d1" >
+	<div class="header">
+		<h1 class="big-title">每日安全巡检区域实时监控</h1>
+		<div class="time" id=localtimeb></div>
+	</div>
+	
+	<div class="main ">
+<div class="ssjk">
+		<!--box1-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">大门口</em><em class="time">6:30-7:00</em></span>
+					<span class="txt-b"><em>巡检人：陈老师</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-green">已完成</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">监控器检视</span>
+							<span class="txt-l">6：20</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">消防设备</span>
+							<span class="txt-l">6：25</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">来客管理</span>
+							<span class="txt-l">6：35</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+						<li>
+							<span class="txt-l">卫生清洁</span>
+							<span class="txt-l">6：35</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box1-end-->
+		
+		<!--box2-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">操场</em><em class="time">6:30-7:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-green">已完成</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">大型玩具</span>
+							<span class="txt-l">6：35</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">物品安全</span>
+							<span class="txt-l">6：35</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">如厕安全</span>
+							<span class="txt-l">6：45</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+						<li>
+							<span class="txt-l">门窗安全</span>
+							<span class="txt-l">6：50</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box2-end-->
+		
+		<!--box3-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">校车</em><em class="time">6:30-7:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-yellow">进行中</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">出车检查</span>
+							<span class="txt-l">6：30</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">故障检修</span>
+							<span class="txt-l">6：40</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">证件管理</span>
+							<span class="txt-l">6：45</span>
+							<span class="txt-l color-yellow">待检</span>
+						</li>
+						<li>
+							<span class="txt-l">随车管理员</span>
+							<span class="txt-l">6：50</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box3-end-->
+</div>
+<div class="ssjk">
+		<!--box4-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">大厅</em><em class="time">7:00-7:30</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">悬挂物安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">消防设备</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">来客管理</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">安全标识</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box4-end-->
+		
+		<!--box5-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">户外活动</em><em class="time">7:00-8:00</em></span>
+					<span class="txt-b"><em>巡检人：刘医生</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">入园晨检准备</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">药品柜安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">收接药品安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">安全疏散图配备</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-red">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box5-end-->
+		
+		<!--box6-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">厨房</em><em class="time">7:00-8:00</em></span>
+					<span class="txt-b"><em>巡检人：何老师</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">食品采购安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">用电安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">用油安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">加工间安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-red">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box6-end-->
+</div>		
+	</div><!--main-end-->
+	
+	</div>
+
+	<div class="d1" >
+	<div class="header">
+		<h1 class="big-title">每日安全巡检区域实时监控</h1>
+		<div class="time" id=localtime></div>
+	</div>
+	
+	<div class="main ">
+<div class="ssjk">
+		<!--box1-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">班级</em><em class="time">9:00-11:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-green">已完成</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">区角安全</span>
+							<span class="txt-l">9:20</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">灭火器消防栓</span>
+							<span class="txt-l">9:25</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">应急灯配备</span>
+							<span class="txt-l">9:25</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">安全疏散图配备</span>
+							<span class="txt-l">9:30</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box1-end-->
+		
+		<!--box2-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">睡眠室</em><em class="time">12:00-13:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-green">已完成</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">岗位安全</span>
+							<span class="txt-l">12：20</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">物品安全</span>
+							<span class="txt-l">12：25</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">如厕安全</span>
+							<span class="txt-l">12：25</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+						<li>
+							<span class="txt-l">门窗安全</span>
+							<span class="txt-l">12：25</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box2-end-->
+		
+		<!--box3-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">班级</em><em class="time">14:00-15:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r bg-yellow">进行中</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">大型玩具</span>
+							<span class="txt-l">14：20</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">户外地面</span>
+							<span class="txt-l">14：25</span>
+							<span class="txt-l color-green">正常</span>
+						</li>
+						<li>
+							<span class="txt-l">户外种植区</span>
+							<span class="txt-l">14：25</span>
+							<span class="txt-l color-yellow">待检</span>
+						</li>
+						<li>
+							<span class="txt-l">户外围栏</span>
+							<span class="txt-l">14：25</span>
+							<span class="txt-l color-red">异常</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box3-end-->
+</div>
+<div class="ssjk">
+		<!--box4-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">厨房</em><em class="time">12:00-13:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">留样安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">验货安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">煤气安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+						<li>
+							<span class="txt-l">用油安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box4-end-->
+		
+		<!--box5-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">户外活动</em><em class="time">12:00-13:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">活动场地</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">活动教具</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">人数清点</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">活动秩序</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-red">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box5-end-->
+		
+		<!--box6-star-->
+		<div class="box">
+			<div class="top">
+				<div class="txt-l">
+					<span class="txt-t"><em class="name">户外活动</em><em class="time">12:00-13:00</em></span>
+					<span class="txt-b"><em>巡检人：李高峰</em><em>负责人：李高峰</em></span>
+				</div>
+				<div class="txt-r">待检</div>
+			</div><!--top-end-->
+			<div class="list ">
+				<!--sm-title-star-->
+				<div class="sm-title">
+					<ul>                          
+						<li>
+							<span class="txt-l">检查点</span>
+							<span class="txt-l">巡检时间</span>
+							<span class="txt-l">巡检结果</span>
+						</li>
+					</ul>
+				</div>
+				<!--sm-title-end-->
+				<!--scroll-star-->
+				<div class="scroll">
+					<ul>
+						<li>
+							<span class="txt-l">食品安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">消毒安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">电源安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-green">-</span>
+						</li>
+						<li>
+							<span class="txt-l">桌椅、柜子安全</span>
+							<span class="txt-l">-</span>
+							<span class="txt-l color-red">-</span>
+						</li>
+					</ul>
+				</div>
+				<!--scroll-end-->
+				</div>
+				<!--list-end-->
+		</div><!--box6-end-->
+</div>		
+	</div><!--main-end-->
+	
+	</div>
+	
+	<!------------------------------------------------------------------>
+	<div class="d1">
+		<div class="header">
+		<h1 class="big-title">每月巡检情况汇总分析</h1>
+		<div class="time" id=localtimea></div>
+	</div>
+	
+	<div class="main xjqk">
+		<div class="t-box">
+			<ul>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">公共区域</span>
+				</li>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">室内区域</span>
+				</li>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">厨房</span>
+				</li>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">健康</span>
+				</li>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">户外活动</span>
+				</li>
+				<li>
+					<span class="txt-t">
+						<em class="sum">5</em>
+						<em class="txt">风险点</em>
+					</span>
+					<span class="txt-b">师风师德</span>
+				</li>
+			</ul>
+		</div><!--t-box-end-->
+		
+		
+		
+		<div class="b-box">
+	
+			<div class="work  width-a1" >
+				<div class="title">问题处理统计<span>08-01 至 <em id="localtimec"></em></span></div>
+				<div class="list ">
+					<!--sm-title-star-->
+					<div class="sm-title">
+						<ul>
+							<li>
+								<span class="txt-l">问题类型</span>
+								<span class="txt-l">总数</span>
+								<span class="txt-l">按时解决</span>
+								<span class="txt-l">超时解决</span>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="txt-l">问题类型</span>
+								<span class="txt-l">总数</span>
+								<span class="txt-l">按时解决</span>
+								<span class="txt-l">超时解决</span>
+							</li>
+						</ul>
+					</div>
+					<!--sm-title-end-->
+					<!--scroll-star-->
+					<div class="scroll">
+						<ul>
+							<li>
+								<span class="txt-l">清洁卫生</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">水电维修</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">0</span>
+							</li>
+							<li>
+								<span class="txt-l">保卫安全</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">食品留样</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">电源安全</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">岗位安全</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">幼儿安全</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">食品留样</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">消防设备</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">户外围栏</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">消防安全</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+								<span class="txt-l">1</span>
+							</li>
+							
+						</ul>
+					</div>
+					<!--scroll-end-->
+				</div>
+				<!--list-end-->
+			</div><!--work-end-->
+		
+			<div class="txt-r">
+				
+				<div class="work wtcl" >
+				<div class="title">巡检工作统计<span>08-01 至 <em id="localtimed"></em></span></div>
+				<div class="list ">
+					<!--sm-title-star-->
+					<div class="sm-title">
+						<ul>                          
+							<li>
+								<span class="txt-l">分管人</span>
+								<span class="txt-l">检查天数</span>
+								<span class="txt-l">发现问题</span>
+							</li>
+						</ul>
+						
+					</div>
+					<!--sm-title-end-->
+					<!--scroll-star-->
+					<div class="scroll wtcl-scroll">
+						<ul>
+							<li>
+								<span class="txt-l">张红</span>
+								<span class="txt-l">2</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">陈立文</span>
+								<span class="txt-l">6</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">张浩文</span>
+								<span class="txt-l">4</span>
+								<span class="txt-l">1</span>
+							</li>
+							<li>
+								<span class="txt-l">刘卫东</span>
+								<span class="txt-l">7</span>
+								<span class="txt-l">3</span>
+							</li>
+							<li>
+								<span class="txt-l">李诶的</span>
+								<span class="txt-l">5</span>
+								<span class="txt-l">2</span>
+							</li>
+							
+							
+						</ul>
+					</div>
+					<!--scroll-end-->
+				</div>
+				<!--list-end-->
+			</div><!--work-end-->
+				
+				
+			</div>
+		</div><!--b-box-end-->
+		
+	</div><!--main-end-->
+		
+		
+		
+		
+	</div>
+	
+		<div class="d2" id="banner_id">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">banner()</script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+	<script type="text/javascript">
+		jQuery(".scroll").slide({mainCell:"ul",autoPlay:true,effect:"topMarquee",vis:11,interTime:80});
+		jQuery(".wtcl-scroll").slide({mainCell:"ul",autoPlay:true,effect:"topMarquee",vis:6,interTime:80});
+	</script>
+	
+	
+	
+<script type="text/javascript">
+function showLocale(objD){
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#fff\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#fff\">";
+	if  ( ww==6 )  colorhead="<font color=\"#fff\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</font>"
+	str = colorhead + yy + "年" + MM + "月" + dd + "日" + hh + ":" + mm + ":" + ss + "  " + ww + colorfoot;
+	return(str);
+}
+
+function showLocaleno(objD){
+	var str,colorhead,colorfoot;
+	var yy = objD.getYear();
+	if(yy<1900) yy = yy+1900;
+	var MM = objD.getMonth()+1;
+	if(MM<10) MM = '0' + MM;
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	if  ( ww==0 )  colorhead="<font color=\"#c4d2ff\">";
+	if  ( ww > 0 && ww < 6 )  colorhead="<font color=\"#c4d2ff\">";
+	if  ( ww==6 )  colorhead="<font color=\"#c4d2ff\">";
+	if  (ww==0)  ww="星期日";
+	if  (ww==1)  ww="星期一";
+	if  (ww==2)  ww="星期二";
+	if  (ww==3)  ww="星期三";
+	if  (ww==4)  ww="星期四";
+	if  (ww==5)  ww="星期五";
+	if  (ww==6)  ww="星期六";
+	colorfoot="</font>"
+	str = colorhead + "" + MM + "-" + dd + "" + colorfoot;
+	return(str);
+}
+
+
+
+
+function tick(){
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+function ticka(){
+	var today;
+	today = new Date();
+	document.getElementById("localtimea").innerHTML = showLocale(today);
+	window.setTimeout("ticka()", 1000);
+}
+function tickb(){
+	var today;
+	today = new Date();
+	document.getElementById("localtimeb").innerHTML = showLocale(today);
+	window.setTimeout("tickb()", 1000);
+}
+
+function tickc(){
+	var today;
+	today = new Date();
+	document.getElementById("localtimec").innerHTML = showLocaleno(today);
+	window.setTimeout("tickc()", 1000);
+}
+
+function tickd(){
+	var today;
+	today = new Date();
+	document.getElementById("localtimed").innerHTML = showLocaleno(today);
+	window.setTimeout("tickd()", 1000);
+}
+
+tick();
+ticka();
+tickb();
+tickc();
+tickd();
+</script>
+
+</body>
+</html> 
